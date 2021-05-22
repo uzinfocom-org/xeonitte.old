@@ -21,8 +21,6 @@ bot.telegram.getMe().then((botInfo: User) => {
     bot.options.username = botInfo.username
 })
 
-console.clear()
-
 try {
     if (env.ENVIRONMENT === 'heroku')
         bot.launch({
@@ -44,3 +42,10 @@ try {
 } catch (e) {
     console.log(e)
 }
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+process.once('SIGINT', () => bot.stop('SIGINT'))
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+process.once('SIGTERM', () => bot.stop('SIGTERM'))
