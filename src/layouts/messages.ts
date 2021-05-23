@@ -2,6 +2,7 @@
  * Message Template Layout Manager
  * @module layouts/messages
  */
+import { TelegrafContext } from '@type/telegraf'
 
 export const start: string =
     `<b>Assalomu alaykum, hurmatli administrator!</b> \n` +
@@ -23,3 +24,17 @@ export const rules: string =
     `<code>* Sababsiz guruhga spam yozaverish yoki tashash</code>` +
     `\n` +
     `<code>* So'ralgan narsani yana qayta ezmalash</code>`
+
+export const newMember: string =
+    `<b>Xush kelibsiz guruhimizga, hurmatli administrator!</b>` +
+    `\n` +
+    `\n` +
+    `Administrator, iltimos, ushbu guruhda faoliyat olib borishdan avval, qoidalarimiz bilan tanishib chiqing. So'ngra, ` +
+    `bizning guruhimiz bilan hech qanday muammolar yuz bermasin.` +
+    `\n` +
+    `\n` +
+    `<i>Hurmat ila, Xeonitte (Kseyonita) va Administratorlar</i>`
+
+export const which = (ctx: TelegrafContext): string => {
+    return `<b>Ushbu guruh unikal identifikatori</b> <code>${ctx.chat.id}</code> <b>ga teng va komanda </b> <code>${ctx.from.id}</code> <b>tomonidan ishga tushurildi</b>`
+}
