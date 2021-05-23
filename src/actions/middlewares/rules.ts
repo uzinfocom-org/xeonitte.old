@@ -5,7 +5,7 @@ import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
 
 composer.command('rules', async (ctx: TelegrafContext) => {
-    await ctx.replyWithHTML(message.rules, {
+    await ctx.replyWithHTML(message.rule, {
         parse_mode: 'HTML',
         reply_markup: keyboard.rule
     })

@@ -25,7 +25,14 @@ export const rules: string =
     `\n` +
     `<code>* Sababsiz guruhga spam yozaverish yoki tashash</code>` +
     `\n` +
-    `<code>* So'ralgan narsani yana qayta ezmalash</code>`
+    `<code>* So'ralgan narsani yana qayta ezmalash</code> ` +
+    `\n` +
+    `<code>* Administratorlarga nisbatan juddayam qattiq kritika</code>` +
+    `\n` +
+    `<code>* Faoliyat ustidan shikoyat qilaverish yoki nolish</code>` +
+    `\n` +
+    `\n` +
+    `<b>Ushbu qoidalarni doimiy tarzda buzish, butunlay ban yoki bir necha ogohlantirishlirga olib keladi!</b>`
 
 /**
  * Provoked on new member join
