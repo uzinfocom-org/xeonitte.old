@@ -38,3 +38,9 @@ export const newMember: string =
 export const which = (ctx: TelegrafContext): string => {
     return `<b>Ushbu guruh unikal identifikatori</b> <code>${ctx.chat.id}</code> <b>ga teng va komanda </b> <code>${ctx.from.id}</code> <b>tomonidan ishga tushurildi</b>`
 }
+
+export const source: string =
+    `<b>Oldindan minnatdorchiligimni bildiraman, meni yaxshilash fikriga kelganingiz uchun.</b> ` +
+    `\n` +
+    `\n` +
+    `Ushbu havola orqali mening kodlarimni topishingiz mumkin:`
