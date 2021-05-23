@@ -12,6 +12,8 @@ export const start: string =
     `ushbu guruh foydalanuvchilari uchun foydali resurslarni yetkazish, saqlash va ` +
     `ularni saralash uchun xizmat qilaman.`
 
+export const rule: string = `<b>Hurmatli guruh a'zosi, ushbu guruhni spam bilan to'ldirib tashlamaslik maqsadida, guruhning o'ziga o'tib qoidalarni ko'rib chiqishingizni xohlardik!</b> `
+
 export const rules: string =
     `<b>Hurmatli guruh a'zosi...</b> ` +
     `\n` +
@@ -25,15 +27,30 @@ export const rules: string =
     `\n` +
     `<code>* So'ralgan narsani yana qayta ezmalash</code>`
 
-export const newMember: string =
-    `<b>Xush kelibsiz guruhimizga, hurmatli administrator!</b>` +
-    `\n` +
-    `\n` +
-    `Administrator, iltimos, ushbu guruhda faoliyat olib borishdan avval, qoidalarimiz bilan tanishib chiqing. So'ngra, ` +
-    `bizning guruhimiz bilan hech qanday muammolar yuz bermasin.` +
-    `\n` +
-    `\n` +
-    `<i>Hurmat ila, Xeonitte (Kseyonita) va Administratorlar</i>`
+/**
+ * Provoked on new member join
+ * @param ctx
+ * @return string
+ */
+
+export const newMember = (ctx: TelegrafContext): string => {
+    return (
+        `<b>Xush kelibsiz guruhimizga, hurmatli ${ctx.from.first_name} administrator!</b>` +
+        `\n` +
+        `\n` +
+        `Administrator, iltimos, ushbu guruhda faoliyat olib borishdan avval, qoidalarimiz bilan tanishib chiqing. So'ngra, ` +
+        `bizning guruhimiz bilan hech qanday muammolar yuz bermasin.` +
+        `\n` +
+        `\n` +
+        `<i>Hurmat ila, Xeonitte (Kseyonita) va Administratorlar</i>`
+    )
+}
+
+/**
+ * Provoked on /which command
+ * @param ctx
+ * @return string
+ */
 
 export const which = (ctx: TelegrafContext): string => {
     return `<b>Ushbu guruh unikal identifikatori</b> <code>${ctx.chat.id}</code> <b>ga teng va komanda </b> <code>${ctx.from.id}</code> <b>tomonidan ishga tushurildi</b>`

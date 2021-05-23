@@ -5,7 +5,7 @@ import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
 
 composer.on('new_chat_members', async (ctx: TelegrafContext) => {
-    await ctx.telegram.sendMessage(ctx.chat.id, message.newMember, {
+    await ctx.telegram.sendMessage(ctx.chat.id, message.newMember(ctx), {
         parse_mode: 'HTML',
         reply_markup: keyboard.newMember
     })

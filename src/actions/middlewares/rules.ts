@@ -7,7 +7,7 @@ import { TelegrafContext } from '@type/telegraf'
 composer.command('rules', async (ctx: TelegrafContext) => {
     await ctx.replyWithHTML(message.rules, {
         parse_mode: 'HTML',
-        reply_markup: keyboard.rules
+        reply_markup: keyboard.rule
     })
 })
 
