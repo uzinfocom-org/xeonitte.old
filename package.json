@@ -1,7 +1,7 @@
 {
-  "name": "genogram",
+  "name": "xeonitte",
   "version": "1.0.0",
-  "description": "Telegram bootstrap written by Genemator",
+  "description": "Xinux Jamiyati guruhlari yurituvchisi",
   "main": "app.js",
   "scripts": {
     "start": "node ./dist/app.js",
@@ -18,7 +18,7 @@
     "bot"
   ],
   "repository": "github:genemator/genogram",
-  "author": "Genemator Sakhib <genemators@gmail.com> (https://genemator.uz)",
+  "author": "Genemator Sakhib <sakhib.orzklv@icloud.com> (https://genemator.uz)",
   "license": "CC0-1.0",
   "dependencies": {
     "axios": "^0.21.1",
