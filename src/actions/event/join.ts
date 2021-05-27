@@ -14,9 +14,5 @@ composer.on('message', async (ctx: TelegrafContext) => {
     }
 })
 
-// composer.hears(/\/join (.+)/ig, async (ctx: TelegrafContext) => {
-//     const groupId = ctx.match[1]
-// })
-
 middleware(composer)
 consoles.module(__filename)
