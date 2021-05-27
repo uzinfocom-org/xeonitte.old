@@ -19,7 +19,7 @@ tezligi va sifatiga mutlaqo ta'sir qilmaydi.**
 
 ## Kontributorlar (qatnashgan dasturchilar)
 
-Ushbu bot kontributorlarga rahmatlar bo'lsinki bor va shul odamlar:
+Ushbu bot kontributorlarga rahmatlar bo'lsinki bor va shu odamlar:
 
 -   [Genemator](https://github.com/genemators) _(Yaratuvchi)_ - Ushbu botni yaratish
     fikriga kelgan, va uni realizatsiya bilan shug'ullangan inson.
