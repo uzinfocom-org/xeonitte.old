@@ -5,7 +5,7 @@ import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
 import env from '@core/env'
 
-composer.start(async (ctx: TelegrafContext) => {
+composer.help(async (ctx: TelegrafContext) => {
     if (ctx.chat.id === parseInt(env.GROUP)) {
         await ctx.replyWithHTML(message.help(true))
     }
