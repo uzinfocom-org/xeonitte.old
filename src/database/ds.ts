@@ -2,7 +2,7 @@
  * JSON Down Parser
  * @name axios json parser
  * @description parses json from online API
- * @return JSON
+ * @return JSON | null
  */
 import axios, { AxiosResponse } from 'axios'
 
