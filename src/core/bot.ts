@@ -45,7 +45,7 @@ try {
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-process.once('SIGINT', () => bot.stop('SIGINT'))
+// process.once('SIGINT', () => bot.stop('SIGINT'))
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-process.once('SIGTERM', () => bot.stop('SIGTERM'))
+// process.once('SIGTERM', () => bot.stop('SIGTERM'))
