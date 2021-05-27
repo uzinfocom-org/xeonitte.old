@@ -1,2 +1,2 @@
-// import './join'
+import './join'
 import './group'
