@@ -3,19 +3,17 @@ import * as consoles from '@layouts/consoles'
 import * as message from '@layouts/messages'
 import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
+import env from '@core/env'
 
 composer.start(async (ctx: TelegrafContext) => {
-    switch (ctx.startPayload) {
-        case 'rules':
-            await ctx.replyWithHTML(message.rules, {
-                reply_markup: keyboard.rules
-            })
-            break
-        default:
-            await ctx.replyWithHTML(message.start, {
-                reply_markup: keyboard.start
-            })
-            break
+    if (ctx.chat.id === parseInt(env.GROUP)) {
+        await ctx.replyWithHTML(message.help(true))
+    }
+
+    if (ctx.chat.id !== parseInt(env.GROUP)) {
+        await ctx.replyWithHTML(message.help(false), {
+            reply_markup: keyboard.help
+        })
     }
 })
 

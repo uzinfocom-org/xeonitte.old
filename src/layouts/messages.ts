@@ -12,7 +12,26 @@ export const start: string =
     `ushbu guruh foydalanuvchilari uchun foydali resurslarni yetkazish, saqlash va ` +
     `ularni saralash uchun xizmat qilaman.`
 
-export const rule: string = `<b>Hurmatli guruh a'zosi, ushbu guruhni spam bilan to'ldirib tashlamaslik maqsadida, guruhning o'ziga o'tib qoidalarni ko'rib chiqishingizni xohlardik!</b> `
+export const help = (isOurGroup: boolean): string => {
+    const base: string =
+        `<b>Mavjud komandalar ro'yxati:</b>` +
+        `\n` +
+        `\n` +
+        `/help - <code>ushbu habarni qayta ko'rsatish</code>` +
+        `\n` +
+        `/rules - <code>qoidalarni aks ettirish</code>` +
+        `\n` +
+        `/source - <code>shu telegram bot kodlarini ko'rsatish</code>` +
+        `\n` +
+        `/which - <code>ushbu guruh va foydalanuvchi metrik ma'lumotlarini ko'rsatish</code>` +
+        `\n`
+    const addition: string =
+        `\n` +
+        `<b>Hamda, bizning guruhimizga quyidagi tugmachani bosish orqali a'zo bo'lishni unutmang!</b>`
+    return isOurGroup ? base : base + addition
+}
+
+export const rule = `<b>Hurmatli guruh a'zosi, ushbu guruhni spam bilan to'ldirib tashlamaslik maqsadida, guruhning o'ziga o'tib qoidalarni ko'rib chiqishingizni xohlardik!</b> `
 
 export const rules: string =
     `<b>Hurmatli guruh a'zosi...</b> ` +

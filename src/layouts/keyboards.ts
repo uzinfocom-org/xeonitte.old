@@ -9,6 +9,10 @@ export const start: InlineKeyboardMarkup = Markup.inlineKeyboard([
     [Markup.urlButton(`Guruhimiz`, `https://t.me/xinuxuz`)]
 ])
 
+export const help: InlineKeyboardMarkup = Markup.inlineKeyboard([
+    [Markup.urlButton(`Guruhimiz`, `https://t.me/xinuxuz`)]
+])
+
 export const rule: InlineKeyboardMarkup = Markup.inlineKeyboard([
     [
         Markup.urlButton(
