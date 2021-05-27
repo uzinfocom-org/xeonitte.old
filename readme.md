@@ -17,7 +17,7 @@ tezligi va sifatiga mutlaqo ta'sir qilmaydi.**
 -   **Telegraf.js** - [Github](https://github.com/telegraf/telegraf)
 -   **Telegram Bot API** - [Web sahifa](https://core.telegram.org/bots/api)
 
-## Kontributorlar (qatnashgan dasturchilar)
+## Kontributorlar (rivojlantirish jarayonida qatnashgan dasturchilar)
 
 Ushbu bot kontributorlarga rahmatlar bo'lsinki bor va shu odamlar:
 
