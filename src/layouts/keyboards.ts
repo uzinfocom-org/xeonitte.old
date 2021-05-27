@@ -3,6 +3,7 @@
  * @module layouts/keyboards
  */
 import { Markup } from 'telegraf'
+import distros from '@database/distros'
 import { InlineKeyboardMarkup } from 'telegraf/typings/telegram-types'
 
 export const start: InlineKeyboardMarkup = Markup.inlineKeyboard([
@@ -33,3 +34,11 @@ export const newMember: InlineKeyboardMarkup = Markup.inlineKeyboard([
 export const source: InlineKeyboardMarkup = Markup.inlineKeyboard([
     [Markup.urlButton(`Havola`, `https://github.com/xinuxuz/xeonitte`)]
 ])
+
+export const distro = async (): Promise<InlineKeyboardMarkup> => {
+    const base = []
+    for (const distro of await distros()) {
+        base.push([Markup.urlButton(distro.name, distro.link)])
+    }
+    return Markup.inlineKeyboard(base)
+}

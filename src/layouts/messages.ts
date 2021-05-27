@@ -89,3 +89,7 @@ export const source: string =
     `\n` +
     `\n` +
     `Ushbu havola orqali mening kodlarimni topishingiz mumkin:`
+
+export const distro:
+    | string
+    | undefined = `<b>Ushbu ro'yxatlar ichidan o'zingizga kerakli distributivni tanlang:</b>`
