@@ -3,7 +3,7 @@ import * as consoles from '@layouts/consoles'
 import { TelegrafContext } from '@type/telegraf'
 import env from '@core/env'
 
-composer.on('new_chat_members', async (ctx: TelegrafContext) => {
+composer.on('migrate_from_chat_id', async (ctx: TelegrafContext) => {
     if (ctx.chat.type !== 'private') {
         if (
             ctx.chat.id !== parseInt(env.GROUP) ||
