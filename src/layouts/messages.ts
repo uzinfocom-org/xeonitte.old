@@ -24,6 +24,8 @@ export const help = async (isOurGroup: boolean): Promise<string> => {
         `/source - <code>shu telegram bot kodlarini ko'rsatish</code>` +
         `\n` +
         `/which - <code>ushbu guruh va foydalanuvchi metrik ma'lumotlarini ko'rsatish</code>` +
+        `\n` +
+        `/distro - <code>saytimizdagi distributivlarni havolasini olish</code>` +
         `\n`
     const addition: string =
         `\n` +
