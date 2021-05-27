@@ -12,7 +12,7 @@ export const start: string =
     `ushbu guruh foydalanuvchilari uchun foydali resurslarni yetkazish, saqlash va ` +
     `ularni saralash uchun xizmat qilaman.`
 
-export const help = (isOurGroup: boolean): string => {
+export const help = async (isOurGroup: boolean): Promise<string> => {
     const base: string =
         `<b>Mavjud komandalar ro'yxati:</b>` +
         `\n` +
@@ -59,9 +59,11 @@ export const rules: string =
  * @return string
  */
 
-export const newMember = (ctx: TelegrafContext): string => {
+export const newMember = async (ctx: TelegrafContext): Promise<string> => {
     return (
-        `<b>Xush kelibsiz guruhimizga, hurmatli ${ctx.from.first_name} administrator!</b>` +
+        `<b>Xush kelibsiz guruhimizga, hurmatli administrator${
+            ctx.message.new_chat_members.length > 1 ? 'lar' : ''
+        }!</b>` +
         `\n` +
         `\n` +
         `Administrator, iltimos, ushbu guruhda faoliyat olib borishdan avval, qoidalarimiz bilan tanishib chiqing. So'ngra, ` +
@@ -78,7 +80,7 @@ export const newMember = (ctx: TelegrafContext): string => {
  * @return string
  */
 
-export const which = (ctx: TelegrafContext): string => {
+export const which = async (ctx: TelegrafContext): Promise<string> => {
     return `<b>Ushbu guruh unikal identifikatori</b> <code>${ctx.chat.id}</code> <b>ga teng va komanda </b> <code>${ctx.from.id}</code> <b>tomonidan ishga tushurildi</b>`
 }
 

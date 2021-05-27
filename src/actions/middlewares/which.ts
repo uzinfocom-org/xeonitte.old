@@ -1,10 +1,9 @@
 import { composer, middleware } from '@core/bot'
 import * as consoles from '@layouts/consoles'
 import * as message from '@layouts/messages'
-import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
 
-composer.command('which', async (ctx: TelegrafContext) => {
+composer.command('which', async (ctx: TelegrafContext): Promise<void> => {
     if (ctx.from.id !== 756870298) {
         await ctx.replyWithHTML(
             `Ara-ara! Sizga taqiqlanadi ushbu komandani ishga tushurish!`
@@ -12,7 +11,7 @@ composer.command('which', async (ctx: TelegrafContext) => {
     }
 
     if (ctx.from.id === 756870298) {
-        await ctx.replyWithHTML(message.which(ctx))
+        await ctx.replyWithHTML(await message.which(ctx))
     }
 })
 

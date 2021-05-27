@@ -3,9 +3,8 @@ import * as consoles from '@layouts/consoles'
 import * as message from '@layouts/messages'
 import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
-import env from '@core/env'
 
-composer.on('new_chat_members', async (ctx: TelegrafContext) => {
+composer.on('new_chat_members', async (ctx: TelegrafContext): Promise<void> => {
     if (ctx.message.new_chat_members.some((user) => user.username === ctx.me)) {
         // if (
         //     ctx.chat.id !== parseInt(env.GROUP) ||
@@ -27,10 +26,14 @@ composer.on('new_chat_members', async (ctx: TelegrafContext) => {
     }
 
     if (ctx.message.new_chat_members.some((user) => user.username !== ctx.me)) {
-        await ctx.telegram.sendMessage(ctx.chat.id, message.newMember(ctx), {
-            parse_mode: 'HTML',
-            reply_markup: keyboard.newMember
-        })
+        await ctx.telegram.sendMessage(
+            ctx.chat.id,
+            await message.newMember(ctx),
+            {
+                parse_mode: 'HTML',
+                reply_markup: keyboard.newMember
+            }
+        )
     }
 })
 

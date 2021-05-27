@@ -4,7 +4,7 @@ import * as message from '@layouts/messages'
 import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
 
-composer.command('source', async (ctx: TelegrafContext) => {
+composer.command('source', async (ctx: TelegrafContext): Promise<void> => {
     await ctx.replyWithHTML(message.source, {
         parse_mode: 'HTML',
         reply_markup: keyboard.source

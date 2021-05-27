@@ -4,7 +4,7 @@ import * as message from '@layouts/messages'
 import * as keyboard from '@layouts/keyboards'
 import { TelegrafContext } from '@type/telegraf'
 
-composer.start(async (ctx: TelegrafContext) => {
+composer.start(async (ctx: TelegrafContext): Promise<void> => {
     switch (ctx.startPayload) {
         case 'rules':
             await ctx.replyWithHTML(message.rules, {
