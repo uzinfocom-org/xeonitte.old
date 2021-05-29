@@ -8,10 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
-        env:
-          HOST: heroku
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          DB_HOST: ${{ secrets.DB_URL }}
         with:
           node-version: 14
       - name: Get yarn cache directory path
