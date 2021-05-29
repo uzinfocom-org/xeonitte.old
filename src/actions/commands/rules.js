@@ -7,7 +7,7 @@ composer.command('rules', async (ctx) => {
     if (ctx.chat.type === 'private') {
         return ctx.replyWithHTML(rules())
     } else if (ctx.chat.type === 'supergroup' || ctx.chat.type === 'group') {
-        return ctx.replyWithHTML(rules_redirect(), rules_btn)
+        return ctx.replyWithMarkdown(rules_redirect(), { reply_markup: await rules_btn() })
     }
 })
 

@@ -4,7 +4,7 @@ const { source_btn } = require('../../views/keyboards')
 const { log_module } = require('../../views/consoles')
 
 composer.command('source', async (ctx) => {
-    return ctx.reply(source(), source_btn)
+    return ctx.replyWithMarkdown(source(), { reply_markup: source_btn })
 })
 
 middleware(composer)

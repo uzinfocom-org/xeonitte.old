@@ -5,7 +5,7 @@ const { log_module } = require('../../views/consoles')
 require('dotenv').config()
 
 composer.command('which', async (ctx) => {
-    return ctx.replyWithHTML(which(ctx), which_keyboard)
+    return ctx.replyWithHTML(which(ctx), { reply_markup: which_keyboard })
 })
 
 composer.action('which()', async (ctx) => {

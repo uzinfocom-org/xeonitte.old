@@ -12,7 +12,7 @@ composer.start(async (ctx) => {
             })
             break
         default:
-            await ctx.replyWithHTML(start(ctx), start_keyboard)
+            await ctx.replyWithHTML(start(ctx), { reply_markup: start_keyboard })
             break
     }
 })

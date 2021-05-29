@@ -4,30 +4,31 @@
  */
 
 const { Markup } = require('telegraf')
+console.log(Markup)
 const wiki = require('../db/wiki')
 const wikis = require('../db/wiki')
 
 const start_keyboard = Markup.inlineKeyboard([
-    Markup.button.url('Guruhimiz', 'https://t.me/xinuxuz')
+    Markup.urlButton('Guruhimiz', 'https://t.me/xinuxuz')
 ])
 
 const rules_btn = Markup.inlineKeyboard([
-    Markup.button.url('Qoidalar', 'https://t.me/xeonittebot?start=rules')
+    Markup.urlButton('Qoidalar', 'https://t.me/xeonittebot?start=rules')
 ])
 
 const which_keyboard = Markup.inlineKeyboard([
-    Markup.button.callback("Ko'rish", 'which()')
+    Markup.urlButton("Ko'rish", 'which()')
 ])
 
 const source_btn = Markup.inlineKeyboard([
-    Markup.button.url('Source', 'https://github.com/xinuxuz/xeonitte'),
-    Markup.button.url('Guruh', 'https://t.me/xeonitte_beta_test')
+    Markup.urlButton('Kod', 'https://github.com/xinuxuz/xeonitte'),
+    Markup.urlButton('Guruh', 'https://t.me/xeonitte_beta_test')
 ])
 
 const wiki_btn = async () => {
     const base = []
     for (let wiki of await wikis()) {
-        base.push([Markup.button.callback(wiki.name, `${wiki.name}()`)])
+        base.push([Markup.callbackButton(wiki.name, `${wiki.name}()`)])
     }
     return Markup.inlineKeyboard(base)
 }
@@ -40,7 +41,7 @@ const wiki_arch = async () => {
         if (the_wiki[i].name === action) {
             for (let j = 0; j < the_wiki[i].distros.length; j++) {
                 btns.push([
-                    Markup.button.url(
+                    Markup.urlButton(
                         the_wiki[i].distros[j].name,
                         the_wiki[i].distros[j].link
                     )
@@ -59,7 +60,7 @@ const wiki_debian = async () => {
         if (the_wiki[i].name === action) {
             for (let j = 0; j < the_wiki[i].distros.length; j++) {
                 btns.push([
-                    Markup.button.url(
+                    Markup.urlButton(
                         the_wiki[i].distros[j].name,
                         the_wiki[i].distros[j].link
                     )

@@ -4,17 +4,17 @@ const { log_module } = require('../../views/consoles')
 const { wiki_btn, wiki_arch, wiki_debian } = require('../../views/keyboards')
 
 composer.command('wiki', async (ctx) => {
-    return ctx.reply(wiki_family(), await wiki_btn())
+    return ctx.replyWithMarkdown(wiki_family(), { reply_markup: await wiki_btn() })
 })
 
 composer.action('Arch()', async (ctx) => {
     ctx.deleteMessage()
-    await ctx.reply(wiki_distro(), await wiki_arch())
+    await ctx.replyWithMarkdown(wiki_distro(), { reply_markup: await wiki_arch() })
 })
 
 composer.action('Debian()', async (ctx) => {
     ctx.deleteMessage()
-    await ctx.reply(wiki_distro(), await wiki_debian())
+    await ctx.replyWithMarkdown(wiki_distro(), { reply_markup: await wiki_debian() })
 })
 
 middleware(composer)
