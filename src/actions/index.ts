@@ -1,2 +1,2 @@
-import '@actions/event'
+import '@actions/events'
 import '@actions/middlewares'
