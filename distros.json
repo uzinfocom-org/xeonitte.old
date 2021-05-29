@@ -1,10 +1,22 @@
 [
   {
     "name": "Arch Linux",
-    "link": "https://xinux.uz/arch"
+    "link": "https://xinux.uz/arch",
+    "distros": [
+      {
+        "name": "Manjaro Linux",
+        "link": "https://xinux.uz/arch/distribut/Manjaro/"
+      }
+    ]
   },
   {
     "name": "Debian",
-    "link": "https://xinux.uz/debian"
+    "link": "https://xinux.uz/debian",
+    "distros": [
+      {
+        "name": "Ubuntu",
+        "link": "https://xinux.uz/debian/distribut/Ubuntu/"
+      }
+    ]
   }
 ]
