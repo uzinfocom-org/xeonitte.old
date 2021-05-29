@@ -4,13 +4,10 @@
   "description": "Xinux Jamiyati guruhlari yurituvchisi",
   "main": "app.js",
   "scripts": {
-    "start": "node ./dist/app.js",
-    "build": "tsc",
-    "watch": "tsc -w",
-    "development": "nodemon ./dist/app.js",
-    "lint": "eslint ./src --ext .ts",
+    "start": "node ./src/app.js",
+    "development": "nodemon ./src/app.js",
     "format": "yarn format:check --write",
-    "format:check": "prettier --config .prettierrc --check \"src/**/*.ts\""
+    "format:check": "prettier --config .prettierrc --check \"src/**/*.js\""
   },
   "keywords": [
     "genogram",

@@ -1,0 +1,30 @@
+  [
+    {
+      "name": "Arch",
+      "link": "https://xinux.uz/arch",
+      "distros": [
+        {
+          "name": "Manjaro",
+          "link": "https://xinux.uz/arch/distribut/Manjaro"
+        }, 
+        {
+            "name": "Blackarch",
+            "link": "https://xinux.uz/arch/distribut/blackarch"
+        },
+        {
+            "name": "Xeonix",
+            "link": "https://xinux.uz/arch/distribut/xeonix"
+        }          
+      ]
+    },
+    {
+      "name": "Debian",
+      "link": "https://xinux.uz/debian",
+      "distros": [
+        {
+          "name": "Ubuntu",
+          "link": "https://xinux.uz/debian/distribut/Ubuntu/"
+        }
+      ]
+    }
+  ]
