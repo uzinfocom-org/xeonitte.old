@@ -10,9 +10,11 @@
     "format:check": "prettier --config .prettierrc --check \"src/**/*.js\""
   },
   "keywords": [
-    "genogram",
+    "xinuxuz",
     "telegram",
-    "bot"
+    "bot",
+    "linux",
+    "distro"
   ],
   "repository": "github:xinuxuz/xeonitte",
   "author": "Genemator Sakhib <sakhib.orzklv@icloud.com> (https://genemator.uz)",
