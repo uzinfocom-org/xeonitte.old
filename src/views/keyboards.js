@@ -4,7 +4,6 @@
  */
 
 const { Markup } = require('telegraf')
-console.log(Markup)
 const wiki = require('../db/wiki')
 const wikis = require('../db/wiki')
 
