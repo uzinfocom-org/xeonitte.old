@@ -17,7 +17,7 @@
     "telegram",
     "bot"
   ],
-  "repository": "github:genemator/genogram",
+  "repository": "github:xinuxuz/xeonitte",
   "author": "Genemator Sakhib <sakhib.orzklv@icloud.com> (https://genemator.uz)",
   "license": "CC0-1.0",
   "dependencies": {
