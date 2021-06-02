@@ -3,6 +3,8 @@
  * @module layouts/messages
  */
 import { TelegrafContext } from '@type/telegraf'
+import { InlineKeyboardMarkup } from 'telegraf/typings/telegram-types'
+import { CallbackButton, UrlButton } from 'telegraf/typings/markup'
 
 export const start: string =
     `<b>Assalomu alaykum, hurmatli administrator!</b> \n` +
@@ -26,6 +28,8 @@ export const help = async (isOurGroup: boolean): Promise<string> => {
         `/which - <code>ushbu guruh va foydalanuvchi metrik ma'lumotlarini ko'rsatish</code>` +
         `\n` +
         `/distro - <code>saytimizdagi distributivlarni havolasini olish</code>` +
+        `\n` +
+        `/community - <code>butun dunyo bo'yicha kommyunitylar havolasini olish</code>` +
         `\n`
     const addition: string =
         `\n` +
@@ -101,3 +105,16 @@ export const community: string | undefined =
     `\n` +
     `\n` +
     `<i>Ma'lumotlar </i><a href="https://t.me/Anvar_Alimov">Anvar</a><i> tomonidan yozilgan</i>`
+
+export const communityCallback = (data: {
+    name: string
+    about: string
+    keyboard: (CallbackButton | UrlButton)[][]
+}) =>
+    `<b>${data.name} distro</b>` +
+    `\n` +
+    `\n` +
+    `<i>${data.about}</i>` +
+    `\n` +
+    `\n` +
+    `<b>Quyidagi havola yordamida sotsial tizimlariga o'ting:</b>`

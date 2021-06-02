@@ -6,6 +6,7 @@ import { Markup } from 'telegraf'
 import distros from '@database/distros'
 import communities from '@database/communities'
 import { InlineKeyboardMarkup } from 'telegraf/typings/telegram-types'
+import { CallbackButton, UrlButton } from 'telegraf/typings/markup'
 
 export const start: InlineKeyboardMarkup = Markup.inlineKeyboard([
     [Markup.urlButton(`Guruhimiz`, `https://t.me/xinuxuz`)]
