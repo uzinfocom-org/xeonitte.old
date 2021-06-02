@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Arch Linux",
+    "about": "Minimalistik linux distribut",
+    "callback": "archlinux",
+    "link": "https://archlinux.org"
+  },
+  {
+    "name": "Debian",
+    "about": "Qattiq stabil reliz ostida yurgiziladigan distribut",
+    "callback": "debian",
+    "telegram": "@debianuz",
+    "link": "https://debian.org"
+  }
+]

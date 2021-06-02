@@ -4,6 +4,7 @@
  */
 import { Markup } from 'telegraf'
 import distros from '@database/distros'
+import communities from '@database/communities'
 import { InlineKeyboardMarkup } from 'telegraf/typings/telegram-types'
 
 export const start: InlineKeyboardMarkup = Markup.inlineKeyboard([
@@ -41,4 +42,19 @@ export const distro = async (): Promise<InlineKeyboardMarkup> => {
         base.push([Markup.urlButton(distro.name, distro.link)])
     }
     return Markup.inlineKeyboard(base)
+}
+
+export const community = async (): Promise<InlineKeyboardMarkup> => {
+    const base = []
+    for (const community of await communities()) {
+        base.push(
+            Markup.callbackButton(
+                community.name,
+                'community_' + community.callback
+            )
+        )
+    }
+    return Markup.inlineKeyboard(base, {
+        wrap: (btn, index, currentRow) => currentRow.length > 1
+    })
 }

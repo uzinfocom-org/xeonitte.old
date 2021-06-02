@@ -95,3 +95,9 @@ export const source: string =
 export const distro:
     | string
     | undefined = `<b>Ushbu ro'yxatlar ichidan o'zingizga kerakli distributivni tanlang:</b>`
+
+export const community: string | undefined =
+    `<b>Ushbu komandada siz kommunitylarning havolalarini topishingiz mumkin!</b>` +
+    `\n` +
+    `\n` +
+    `<i>Ma'lumotlar </i><a href="https://t.me/Anvar_Alimov">Anvar</a><i> tomonidan yozilgan</i>`
