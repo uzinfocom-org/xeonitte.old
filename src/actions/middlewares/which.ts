@@ -12,7 +12,7 @@ composer.command('which', async (ctx: TelegrafContext, next): Promise<void> => {
                 break
             default:
                 await ctx.replyWithHTML(
-                  `<b>Ara-ara! Sizga taqiqlanadi ushbu komandani ishga tushurish!</b>`
+                    `<b>Ara-ara! Sizga taqiqlanadi ushbu komandani ishga tushurish!</b>`
                 )
                 counter.yamete++
                 break
