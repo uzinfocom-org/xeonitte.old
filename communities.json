@@ -1,15 +1,162 @@
 [
   {
     "name": "Arch Linux",
-    "about": "Minimalistik linux distribut",
+    "about": "Kamharjlikka asoslangan linux distributi",
     "callback": "archlinux",
+    "telegram": "@archlinux_uz",
     "link": "https://archlinux.org"
   },
   {
     "name": "Debian",
-    "about": "Qattiq stabil reliz ostida yurgiziladigan distribut",
+    "about": "Qattiq barqaror reliz ostida yurgiziladigan distribut",
     "callback": "debian",
     "telegram": "@debianuz",
     "link": "https://debian.org"
+  },
+  {
+    "name": "Ubuntu",
+    "about": "Debian asosidagi takomillashtirilgan va linuxning yangi foydalanuvchilari o'rnatsida juda mashxur bo'lgan distribut",
+    "callback": "ubuntu",
+    "telegram": "@ubuntu_uzbekistan",
+    "link": "https://ubuntu.com"
+  },
+  {
+    "name": "Manjaro",
+    "about": "ArchLinux aosidagi, tezkor va bir qancha boshqa distributlarga qaraganda qulayliklari bor distro",
+    "callback": "manjaro",
+    "telegram": "@manjaro_official",
+    "link": "https://manjaro.org"
+  },
+  {
+    "name": "RedHat",
+    "about": "Aosan tijoriy kompaniyalar va serverlar uchun ishlab chiqilgan va sotiladigan distribut",
+    "callback": "redhat",
+    "telegram": "@fedora_uz",
+    "link": "https://redhat.com"
+  },
+  {
+    "name": "Fedora",
+    "about": "RedHatning tekin vorisi va Linux yaratuvchisi Linus Torvalds foydalanidigan, asosan Yevropada mashxur bo'lgan distribut",
+    "callback": "fedora",
+    "telegram": "@fedora_uz",
+    "link": "https://fedoraproject.org"
+  },
+  {
+    "name": "Linux Mint",
+    "about": "Ubuntu asosidagi, Windows7 interfeysiga o'xshash Cinnamon ishchi stoli bilan chiqariladigan va asosan Windowsdan Linuxga ko'chganlari linux haqida ko'nikma hosil qilishi uchun chiqarildigan distribut",
+    "callback": "linuxmint",
+    "telegram": "@ubuntu_uzbekistan",
+    "link":  "https://linuxmint.com"
+  },
+  {
+    "name": "CentOS",
+    "about": "Web serverlarda juda ko'p marta foydalanilgan va yqindagina ishlab chiqish to'xtatilib, dasturchilari tomonidan boshqa nm bilan chiqarilayotgan, RedHat asosidagi ditribut",
+    "callback": "centos",
+    "telegram": "@fedora_uz",
+    "link": "https://centos.com"
+  },
+  {
+    "name": "SUSE Linux",
+    "about": "SUSE Enterprise tomonidan ikki hil variantda ishlab chiqarildigan distribut. Ular OpenSUSE - oddiy foydalanuvchilarga tekin tarqatiladiga, SUSE Enterprise Linux-korparativ mijozlar uchun pullik asosda taqdim etiladigan distro",
+    "callback": "suse",
+    "telegram": "@fedora_uz",
+    "link": "https://opensuse.com"
+  },
+  {
+    "name": "Gentoo",
+    "about": "Kam sonli foydalanuvchilarga ega, lekin oziga hos bo'lgan linux distributivi",
+    "callback": "gentoo",
+    "telegram": "@gentoo_uz",
+    "link": "https://gentoo.org"
+  },
+  {
+    "name": "Raspbian",
+    "about": "Debian asosidagi, Rapberry mini kompyuterlar uchun ishlab chiqariladigan, minimalistik distributiv",
+    "callback": "raspbian",
+    "telegram": "@debianuz",
+    "link": "https://raspbian.org"
+  },
+  {
+    "name": "OpenMandriva",
+    "about": "Birinchi nomi Mandrake, Keyingisi Mandriva bo'lgan, O'zbekistonlik dasturchilar yaratgan Doppix ga asos bo'lgan Farang distrosi",
+    "callback": "openmandriva",
+    "telegram": "@xinuxuz",
+    "link": "https://openmadriva.com"
+  },
+  {
+    "name": "Kali",
+    "about": "Pentesting va kiber xavfsizlik uchun mo'ljallangan, debian asosidagi linux distributivi",
+    "callback": "kali",
+    "telegram": "@xinuxuz",
+    "link": "https://kali.org"
+  },
+  {
+    "name": "BlackArch",
+    "about": "Kali linuxning raqobatchisi, Undan farqi, blackarch jajmi juda katta va arch linux asosida",
+    "callback": "blackarch",
+    "telegram": "@archlinux_uz",
+    "link": "https://blackarch.org"
+  },
+  {
+    "name": "ParrotOS",
+    "about": "Kali va BlackArchga alternativ va debian aosisdagi pentesting operatsion tizim",
+    "callback": "parrotos",
+    "telegram": "@xinuxuz",
+    "link": "https://parrotsec.com"
+  },
+  {
+    "name": "Kubuntu",
+    "about": "Ubuntuning KDE ishchi stoli bilan chiqariladigan versiyasi",
+    "callback": "kubuntu",
+    "telegram": "@ubuntu_uzbekistan",
+    "link": "https://kubuntu.org"
+  },
+  {
+    "name": "Xubuntu",
+    "about": "Ubuntuning Xfce ishchi stoli bilan chiqariladigan naqli",
+    "callback": "xubuntu",
+    "telegram": "@ubuntu_uzbekistan",
+    "link": "https://xubuntu.org"
+  },
+  {
+    "name": "Lubuntu",
+    "about": "Ubuntuning LXQT ishchi stoli bilan chiqariladigan va minimalistik naqli",
+    "callback": "lubuntu",
+    "telegram": "@ubuntu_uzbekistan",
+    "link": "https://lubuntu.org"
+  },
+  {
+    "name": "FerenOS",
+    "about": "Ubuntu asosidagi va bir qancha qulayliklar qo'shilgan KDE ishchi stoli bilan ta'minlangan distributiv",
+    "callback": "ferenos",
+    "telegram": "@ubuntu_uzbekistan",
+    "link": "https://ferenos.com"
+  },
+  {
+    "name": "KDE NEON",
+    "about": "Debian bazasidagi KDE ishchi stoli bilan, KDE jamosi tomonidan ishlab chiqiladigan Distribut",
+    "callback": "kdeneon",
+    "telegram": "@debianuz",
+    "link": "https://kde.org"
+  },
+  {
+    "name": "GnomeOS",
+    "about": "Debian asosidagi va GNOME dasturchilari tomonidan chiqariladigan, GNOME ishchi stoli bilan tarqatiladigan distro",
+    "callback": "gnomeos",
+    "telegram": "@debianuz",
+    "link": "https://gnome.org"
+  },
+  {
+    "name": "FeeBSD",
+    "about": "Berkley Dasturiy mahsuloti. Bevosida UNIXni davomchisi, BSD oilasi asosi",
+    "callback": "freebsd",
+    "telegram":"@xinuxuz",
+    "link": "https://freebsd.org"
+  },
+  {
+    "name": "MacOS",
+    "about": "Apple INC. Tominidan Mac kompyuter va noutbooklari uchungina ishlab chiqilgan. Qulay va chiroyli grafik ko'rinish va qulaylikka ega UNIX avlodi.",
+    "callback": "macos",
+    "link": "https://www.apple.com/macos"
   }
 ]
