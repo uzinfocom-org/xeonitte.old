@@ -56,6 +56,6 @@ export const community = async (): Promise<InlineKeyboardMarkup> => {
         )
     }
     return Markup.inlineKeyboard(base, {
-        wrap: (btn, index, currentRow) => currentRow.length > 1
+        wrap: (btn, index, currentRow) => currentRow.length > 2
     })
 }
