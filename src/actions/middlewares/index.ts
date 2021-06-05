@@ -1,3 +1,4 @@
+import './beta'
 import './help'
 import './start'
 import './rules'

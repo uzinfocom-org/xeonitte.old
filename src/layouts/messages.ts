@@ -21,6 +21,8 @@ export const help = async (isOurGroup: boolean): Promise<string> => {
         `\n` +
         `/help - <code>ushbu habarni qayta ko'rsatish</code>` +
         `\n` +
+        `/beta - <code>ushbu botimizning rivojlantirish qismi</code>` +
+        `\n` +
         `/rules - <code>qoidalarni aks ettirish</code>` +
         `\n` +
         `/source - <code>shu telegram bot kodlarini ko'rsatish</code>` +
@@ -118,3 +120,11 @@ export const communityCallback = (data: {
     `\n` +
     `\n` +
     `<b>Quyidagi havola yordamida sotsial tizimlariga o'ting:</b>`
+
+export const beta: string =
+    `<b>Hurmatli foydalanuvchi!</b> \n` +
+    `\n` +
+    `Bizning botimiz aktiv tarzda shakllantirib boriladi. ` +
+    `Buning ustida esa bir necha avtor va dasturchilar turadi, ` +
+    `ushbu havolalar orqali bizning sinovchilarimizdan biriga aylaning ` +
+    `va biz bilan botimiz, hamda guruhimiz ishlatish qulayligini oshiring.`

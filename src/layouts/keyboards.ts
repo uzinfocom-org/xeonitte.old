@@ -26,7 +26,7 @@ export const rule: InlineKeyboardMarkup = Markup.inlineKeyboard([
 ])
 
 export const rules: InlineKeyboardMarkup = Markup.inlineKeyboard([
-    [Markup.urlButton(`Hello World`, `https://google.com`)]
+    [Markup.urlButton(`Guruhga Qaytish`, `https://t.me/xinuxuz`)]
 ])
 
 export const newMember: InlineKeyboardMarkup = Markup.inlineKeyboard([
@@ -59,3 +59,15 @@ export const community = async (): Promise<InlineKeyboardMarkup> => {
         wrap: (btn, index, currentRow) => currentRow.length > 2
     })
 }
+
+export const beta: InlineKeyboardMarkup = Markup.inlineKeyboard([
+    [Markup.urlButton(`Guruhimiz`, `https://t.me/xeonitte_beta_test`)],
+    [Markup.urlButton(`JS Test Botimiz`, `https://t.me/xeonitte_beta_bot`)],
+    [
+        Markup.urlButton(
+            `TS Test Botimiz`,
+            `https://t.me/xeonitte_genemator_bot`
+        )
+    ],
+    [Markup.urlButton(`Admin (Jakhongir)`, `https://t.me/JustCodeIt`)]
+])
