@@ -146,7 +146,7 @@ export const doc = async (
             `<i>Bir bor ekan, bir yo'q ekan... Qadim o'tgan zamonlarda dokumentatsiya ` +
             `bo'lgan ekan. Aytishlariga qaraganda, undan deyarli hamma savollarga ` +
             `javob olsa bo'larkanda. Yanachi, unga avtorlar shunchalik ko'p vaqt ajratishar ` +
-            `ekanu, lekin uni sanoqligina odam o'qisherkan. Attang...</i>`
+            `ekanu, lekin uni sanoqligina odam o'qisharkan. Attang...</i>`
         )
     }
 }
