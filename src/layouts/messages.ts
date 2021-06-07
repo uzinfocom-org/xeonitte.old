@@ -3,7 +3,6 @@
  * @module layouts/messages
  */
 import { TelegrafContext } from '@type/telegraf'
-import { InlineKeyboardMarkup } from 'telegraf/typings/telegram-types'
 import { CallbackButton, UrlButton } from 'telegraf/typings/markup'
 
 export const start: string =
@@ -18,6 +17,8 @@ export const help = async (isOurGroup: boolean): Promise<string> => {
     const base: string =
         `<b>Mavjud komandalar ro'yxati:</b>` +
         `\n` +
+        `\n` +
+        `/doc - <code>replay qilingan odamga dokumentatsiya borligi haqida eslatiladi</code>` +
         `\n` +
         `/help - <code>ushbu habarni qayta ko'rsatish</code>` +
         `\n` +
@@ -112,7 +113,7 @@ export const communityCallback = (data: {
     name: string
     about: string
     keyboard: (CallbackButton | UrlButton)[][]
-}) =>
+}): string =>
     `<b>${data.name} distro</b>` +
     `\n` +
     `\n` +
@@ -128,3 +129,24 @@ export const beta: string =
     `Buning ustida esa bir necha avtor va dasturchilar turadi, ` +
     `ushbu havolalar orqali bizning sinovchilarimizdan biriga aylaning ` +
     `va biz bilan botimiz, hamda guruhimiz ishlatish qulayligini oshiring.`
+
+export const doc = async (
+    hasReply: boolean,
+    ctx: TelegrafContext
+): Promise<string> => {
+    if (hasReply) {
+        return `<b>Qani menga shu shovvoz bolani bir ko'rsatingchi xatini reply qilib!?...</b>`
+    }
+
+    if (!hasReply) {
+        return (
+            `<b>Demak, ${ctx.message.reply_to_message.from.first_name}</b>` +
+            `\n` +
+            `\n` +
+            `<i>Bir bor ekan, bir yo'q ekan... Qadim o'tgan zamonlarda dokumentatsiya ` +
+            `bo'lgan ekan. Aytishlariga qaraganda, undan deyarli hamma savollarga ` +
+            `javob olsa bo'larkanda. Yanachi, unga avtorlar shunchalik ko'p vaqt ajratishar ` +
+            `ekanu, lekin uni sanoqligina odam o'qisherkan. Attang...</i>`
+        )
+    }
+}

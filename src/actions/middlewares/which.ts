@@ -1,6 +1,5 @@
 import { composer, middleware, counter } from '@core/bot'
 import * as consoles from '@layouts/consoles'
-import * as message from '@layouts/messages'
 import { TelegrafContext } from '@type/telegraf'
 
 const ahegao: string | undefined =
