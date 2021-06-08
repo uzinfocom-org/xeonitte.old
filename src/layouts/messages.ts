@@ -150,3 +150,16 @@ export const doc = async (
         )
     }
 }
+
+export const man = async (
+    hasQuery: boolean,
+    query: string
+): Promise<string> => {
+    if (hasQuery) {
+        return `<b>Ushbu</b> <i>"${query}"</i> <b>uchun natijalar:</b>`
+    }
+
+    if (!hasQuery) {
+        return `<b>Bu komandaning maqsadi, kalit so'zlar orqali shu dasturning dokumentativ saytlariga havolalarni topib berishdir!</b>`
+    }
+}

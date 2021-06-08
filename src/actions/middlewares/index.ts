@@ -1,3 +1,4 @@
+import './man'
 import './beta'
 import './help'
 import './start'

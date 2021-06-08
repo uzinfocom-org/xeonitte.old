@@ -1,0 +1,14 @@
+[
+  {
+    "name": "i3",
+    "info": "Windows Tiling management system (wm)",
+    "website": "https://i3wm.org/",
+    "documentation": "https://i3wm.org/docs/"
+  },
+  {
+    "name": "bspwm",
+    "info": "Optimized version of windows tiling management (wm)",
+    "website": "https://github.com/baskerville/bspwm/",
+    "documentation": "https://github.com/baskerville/bspwm/wiki"
+  }
+]

@@ -3,8 +3,12 @@
  * @module layouts/keyboards
  */
 import { Markup } from 'telegraf'
+import mans from '@database/man'
 import distros from '@database/distros'
 import communities from '@database/communities'
+
+import Fuse from 'fuse.js'
+
 import { InlineKeyboardMarkup } from 'telegraf/typings/telegram-types'
 
 export const start: InlineKeyboardMarkup = Markup.inlineKeyboard([
@@ -57,6 +61,18 @@ export const community = async (): Promise<InlineKeyboardMarkup> => {
     return Markup.inlineKeyboard(base, {
         wrap: (btn, index, currentRow) => currentRow.length > 2
     })
+}
+
+export const man = async (query: string): Promise<InlineKeyboardMarkup> => {
+    const base = []
+    const result = new Fuse(await mans(), {
+        keys: ['name', 'info']
+    })
+
+    for (const key of result.search(query)) {
+        base.push([Markup.urlButton(key.item.name, key.item.documentation)])
+    }
+    return Markup.inlineKeyboard(base)
 }
 
 export const beta: InlineKeyboardMarkup = Markup.inlineKeyboard([

@@ -25,6 +25,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
+    "fuse.js": "^6.4.6",
     "is-reachable": "^5.0.0",
     "node-cron": "^2.0.3",
     "telegraf": "^3.38.0"
