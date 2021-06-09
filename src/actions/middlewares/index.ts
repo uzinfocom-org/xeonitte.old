@@ -1,4 +1,5 @@
 import './man'
+import './vim'
 import './beta'
 import './help'
 import './start'

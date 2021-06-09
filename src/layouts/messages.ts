@@ -163,3 +163,7 @@ export const man = async (
         return `<b>Bu komandaning maqsadi, kalit so'zlar orqali shu dasturning dokumentativ saytlariga havolalarni topib berishdir!</b>`
     }
 }
+
+export const vim:
+    | string
+    | undefined = `<b>Ushbu havolalardan darsliklarni tanlab oling:</b>`

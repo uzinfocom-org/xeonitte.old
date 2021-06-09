@@ -3,6 +3,7 @@
  * @module layouts/keyboards
  */
 import { Markup } from 'telegraf'
+import vims from '@database/vim'
 import mans from '@database/man'
 import distros from '@database/distros'
 import communities from '@database/communities'
@@ -86,3 +87,11 @@ export const beta: InlineKeyboardMarkup = Markup.inlineKeyboard([
     ],
     [Markup.urlButton(`Admin (Jakhongir)`, `https://t.me/JustCodeIt`)]
 ])
+
+export const vim = async (): Promise<InlineKeyboardMarkup> => {
+    const base = []
+    for (const vim of await vims()) {
+        base.push([Markup.urlButton(`${vim.lesson} - ${vim.name}`, vim.link)])
+    }
+    return Markup.inlineKeyboard(base)
+}
