@@ -167,3 +167,9 @@ export const man = async (
 export const vim:
     | string
     | undefined = `<b>Ushbu havolalardan darsliklarni tanlab oling:</b>`
+
+export const vimCallback = (data: {
+    name: string
+    lesson: number
+    link: string
+}): string => `${data.lesson}. ${data.name}`

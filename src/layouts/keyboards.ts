@@ -91,7 +91,9 @@ export const beta: InlineKeyboardMarkup = Markup.inlineKeyboard([
 export const vim = async (): Promise<InlineKeyboardMarkup> => {
     const base = []
     for (const vim of await vims()) {
-        base.push([Markup.urlButton(`${vim.lesson} - ${vim.name}`, vim.link)])
+        base.push(Markup.callbackButton(`${vim.lesson}`, `vim_${vim.lesson}`))
     }
-    return Markup.inlineKeyboard(base)
+    return Markup.inlineKeyboard(base, {
+        wrap: (btn, index, currentRow) => currentRow.length > 3
+    })
 }
