@@ -10,5 +10,11 @@
     "info": "Optimized version of windows tiling management (wm)",
     "website": "https://github.com/baskerville/bspwm/",
     "documentation": "https://github.com/baskerville/bspwm/wiki"
+  },
+  {
+    "name": "vim",
+    "info": "Vim text editor",
+    "website": "https://vim.org",
+    "documentation": "https://vim.org/docs.php"
   }
 ]
