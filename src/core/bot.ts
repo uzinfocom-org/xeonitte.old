@@ -15,9 +15,6 @@ export const counter: {
 } = {
     yamete: 0
 }
-env.ENVIRONMENT = 'local'
-env.TOKEN = '1822458689:AAGHZJeuz_jWxjfFSNNt-bQXGaHgGeAh0-k'
-env.PORT = '9090'
 export const bot = new Telegraf<TelegrafContext>(env.TOKEN)
 export const composer = new Composer<TelegrafContext>()
 export const middleware = (composer: Composer<TelegrafContext>): void => {
