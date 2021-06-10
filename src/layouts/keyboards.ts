@@ -3,6 +3,7 @@
  * @module layouts/keyboards
  */
 import { Markup } from 'telegraf'
+import lessonsf from '@database/lessons'
 import vims from '@database/vim'
 import mans from '@database/man'
 import distros from '@database/distros'
@@ -95,5 +96,14 @@ export const vim = async (): Promise<InlineKeyboardMarkup> => {
     }
     return Markup.inlineKeyboard(base, {
         wrap: (btn, index, currentRow) => currentRow.length > 3
+    })
+}
+export const lessons = async (): Promise<InlineKeyboardMarkup> => {
+    const base = []
+    for (const lessons of await lessonsf()) {
+        base.push(Markup.callbackButton(`${lessons.name}`, `id_${lessons.id}`))
+    }
+    return Markup.inlineKeyboard(base, {
+        wrap: (btn, index, currentRow) => currentRow.length > 2
     })
 }

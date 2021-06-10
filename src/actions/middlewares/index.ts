@@ -1,3 +1,4 @@
+import './lessons'
 import './man'
 import './vim'
 import './beta'

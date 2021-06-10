@@ -173,3 +173,10 @@ export const vimCallback = (data: {
     lesson: number
     link: string
 }): string => `${data.lesson}. ${data.name}`
+
+export const lessons: string | undefined = `<b>Darsliklar:</b>`
+export const lessonsCallback = (data: {
+    name: string
+    link: string
+    id: number
+}): string => `${data.name}`
