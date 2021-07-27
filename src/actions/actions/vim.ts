@@ -12,7 +12,10 @@ composer.action(/vim_(.+)/gi, async (ctx: TelegrafContext): Promise<void> => {
     const objectID = parseInt(ctx.match[1]) - 1
     const foundData = (await database())[objectID]
 
-    const keyboard = [[Markup.urlButton(`Video Darslik`, foundData.link)]]
+    const keyboard = [
+        [Markup.urlButton(`Video Darslik`, foundData.link)],
+        [Markup.callbackButton(`⬅️ Orqaga`, `vim`)]
+    ]
 
     try {
         await ctx.editMessageText(message.vimCallback(foundData), {

@@ -1,12 +1,47 @@
 [
   {
     "lesson": 1,
-    "name": "Boshlang'ich ma'lumotlar",
+    "name": "VIM Kursi 1-Dars | Kirish",
     "link": "https://www.youtube.com/watch?v=lq4w0-p_S64"
   },
   {
     "lesson": 2,
-    "name": "VIM ni o'rganish uchun manbalar",
+    "name": "VIM Kursi 2-Dars | VIM ni o'rganish uchun manbalar",
     "link": "https://www.youtube.com/watch?v=ca6nI2bqaiA"
+  },
+  {
+    "lesson": 3,
+    "name": "VIM Kursi 3-Dars | VIM Modes & VIM Navigation",
+    "link": "https://www.youtube.com/watch?v=Sfl4IWbbSgg"
+  },
+  {
+    "lesson": 4,
+    "name": "VIM Kursi 4-Dars | Copy&Paste, Editing, Deleting",
+    "link": "https://www.youtube.com/watch?v=T7GS83lk8ZQ"
+  },
+  {
+    "lesson": 5,
+    "name": "VIM Kursi 5-Dars | Replace Mode & etc...",
+    "link": "https://www.youtube.com/watch?v=Zy95R6XemNw"
+  },
+  {
+    "lesson": 6,
+    "name": "VIM Kursi 6-Dars | VIM Tabs",
+    "link": "https://www.youtube.com/watch?v=NJXRTs6PT9Q"
+  },
+  {
+    "lesson": 7,
+    "name": "VIM Kursi 7-Dars | VIMRC",
+    "link": "https://www.youtube.com/watch?v=i0kmGYDpyFI"
+  },
+  {
+    "lesson": 8,
+    "name": "VIM Kursi 8-Dars | Install Plugins and more",
+    "link": "https://www.youtube.com/watch?v=AcSTwYTFDKU"
+  },
+  {
+    "lesson": 9,
+    "name": "VIM Kursi 9-Dars | VSCODE&VIM",
+    "link": "https://www.youtube.com/watch?v=gi2QOcKKF4M"
   }
 ]
