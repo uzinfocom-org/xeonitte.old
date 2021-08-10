@@ -173,3 +173,5 @@ export const vimCallback = (data: {
     lesson: number
     link: string
 }): string => `${data.lesson}. ${data.name}`
+
+// export const mirror: string = `<b></b>`
