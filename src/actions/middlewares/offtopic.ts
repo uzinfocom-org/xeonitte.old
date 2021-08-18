@@ -7,9 +7,15 @@ import { TelegrafContext } from '@type/telegraf'
 composer.command('off', async (ctx: TelegrafContext): Promise<void> => {
     if (ctx.message.reply_to_message) {
         await ctx.replyWithHTML(message.offtopic(ctx), {
-            reply_markup: keyboard.offtopic,
-            reply_to_message_id: ctx.message.reply_to_message.message_id
+            reply_markup: keyboard.offtopic
         })
+        await ctx
+            .deleteMessage(ctx.message.reply_to_message.message_id)
+            .catch(() => {
+                ctx.replyWithHTML(
+                    `<b>Menda yetarlicha priveligiya yo'q ushbu spam | flood ni o'chirish uchun. Menga admin berilar!!!</b>`
+                )
+            })
     }
 
     if (!ctx.message.reply_to_message) {
