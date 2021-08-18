@@ -176,15 +176,37 @@ export const vimCallback = (data: {
     link: string
 }): string => `${data.lesson}. ${data.name}`
 
-export const offtopic: string | undefined =
-    `<b>Hurmatli administrator,</b>` +
-    `\n` +
-    `\n` +
-    `Chunishim bo'yicha siz mavzudan chetlayashayabsiz. Iltimos, ` +
-    `quyidagi tugmachani bosish orqali bizning offtop guruhga o'tib oling! ` +
-    `Offtopic guruhimizda istalgan mavzuda suhbatlashish ruxsat etiladi. Boshqalarga halaqit qilmayliga 😉` +
-    `\n` +
-    `\n` +
-    `<b>Hurmat ila, Xeonitte (Kseyonita)</b>`
+export const offtopic = (ctx: TelegrafContext): string | undefined => {
+    try {
+        if (ctx.message.reply_to_message.from.username) {
+            return (
+                `<b>Hurmatli @${ctx.message.reply_to_message.from.username},</b>` +
+                `\n` +
+                `\n` +
+                `Chunishim bo'yicha siz mavzudan chetlayashayabsiz. Iltimos, ` +
+                `quyidagi tugmachani bosish orqali bizning offtop guruhga o'tib oling! ` +
+                `Offtopic guruhimizda istalgan mavzuda suhbatlashish ruxsat etiladi. Boshqalarga halaqit qilmayliga 😉` +
+                `\n` +
+                `\n` +
+                `<b>Hurmat ila, Xeonitte (Kseyonita)</b>`
+            )
+        }
+        if (!ctx.message.reply_to_message.from.username) {
+            return (
+                `<b>Hurmatli ${ctx.message.reply_to_message.from.first_name},</b>` +
+                `\n` +
+                `\n` +
+                `Chunishim bo'yicha siz mavzudan chetlayashayabsiz. Iltimos, ` +
+                `quyidagi tugmachani bosish orqali bizning offtop guruhga o'tib oling! ` +
+                `Offtopic guruhimizda istalgan mavzuda suhbatlashish ruxsat etiladi. Boshqalarga halaqit qilmayliga 😉` +
+                `\n` +
+                `\n` +
+                `<b>Hurmat ila, Xeonitte (Kseyonita)</b>`
+            )
+        }
+    } catch (e) {
+        console.log('')
+    }
+}
 
 // export const mirror: string = `<b></b>`
