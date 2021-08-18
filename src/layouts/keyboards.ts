@@ -97,3 +97,7 @@ export const vim = async (): Promise<InlineKeyboardMarkup> => {
         wrap: (btn, index, currentRow) => currentRow.length > 3
     })
 }
+
+export const offtopic: InlineKeyboardMarkup = Markup.inlineKeyboard([
+    [Markup.urlButton(`Offtopic Guruhimiz`, `https://t.me/xinuxuz_offtopic`)]
+])
