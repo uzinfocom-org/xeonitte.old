@@ -18,6 +18,8 @@ export const help = async (isOurGroup: boolean): Promise<string> => {
         `<b>Mavjud komandalar ro'yxati:</b>` +
         `\n` +
         `\n` +
+        `/off - <code>replay qilingan odamga offtopic guruhi borligini eslatadi</code>` +
+        `\n` +
         `/doc - <code>replay qilingan odamga dokumentatsiya borligi haqida eslatiladi</code>` +
         `\n` +
         `/help - <code>ushbu habarni qayta ko'rsatish</code>` +
