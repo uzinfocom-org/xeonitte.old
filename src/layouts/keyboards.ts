@@ -101,3 +101,48 @@ export const vim = async (): Promise<InlineKeyboardMarkup> => {
 export const offtopic: InlineKeyboardMarkup = Markup.inlineKeyboard([
     [Markup.urlButton(`Offtopic Guruhimiz`, `https://t.me/xinuxuz_offtopic`)]
 ])
+
+export const aur: InlineKeyboardMarkup = Markup.inlineKeyboard([
+    [
+        Markup.urlButton(
+            `Yay [Golang] (tavsiya qilinadi)`,
+            `https://aur.archlinux.org/packages/yay/`
+        )
+    ],
+    [
+        Markup.urlButton(
+            `Paru [Rust] (tavsiya qilinadi)`,
+            `https://aur.archlinux.org/packages/paru/`
+        )
+    ],
+    [
+        Markup.urlButton(
+            `Aura [Haskell]`,
+            `https://aur.archlinux.org/packages/aura/`
+        )
+    ],
+    [
+        Markup.urlButton(
+            `Pacaur [Bash]`,
+            `https://aur.archlinux.org/packages/pacaur/`
+        )
+    ],
+    [
+        Markup.urlButton(
+            `Pakku [Nim]`,
+            `https://aur.archlinux.org/packages/pakku/`
+        )
+    ],
+    [
+        Markup.urlButton(
+            `Pikaur [Python]`,
+            `https://aur.archlinux.org/packages/pikaur/`
+        )
+    ],
+    [
+        Markup.urlButton(
+            `Trizen [Perl]`,
+            `https://aur.archlinux.org/packages/trizen/`
+        )
+    ]
+])

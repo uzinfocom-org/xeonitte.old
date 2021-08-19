@@ -6,7 +6,7 @@
  */
 import axios, { AxiosResponse } from 'axios'
 
-export default async (link: string | URL): Promise<string | JSON> => {
+export default async (link: string | URL): Promise<any> => {
     try {
         const response: AxiosResponse = await axios.get(<string>link)
         return response.data

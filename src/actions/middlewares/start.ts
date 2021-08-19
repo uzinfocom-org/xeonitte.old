@@ -11,6 +11,11 @@ composer.start(async (ctx: TelegrafContext): Promise<void> => {
                 reply_markup: keyboard.rules
             })
             break
+        case 'aur':
+            await ctx.replyWithHTML(message.aur, {
+                reply_markup: keyboard.aur
+            })
+            break
         default:
             await ctx.replyWithHTML(message.start, {
                 reply_markup: keyboard.start

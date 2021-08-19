@@ -1,4 +1,4 @@
-import './man'
+// import './man'
 import './vim'
 import './beta'
 import './help'

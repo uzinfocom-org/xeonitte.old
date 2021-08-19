@@ -205,4 +205,21 @@ export const offtopic = (ctx: TelegrafContext): string | undefined => {
     }
 }
 
+export const aur: string =
+    `<b>AUR bu o'zi aslida nima?</b> ` +
+    `\n` +
+    `\n` +
+    `Rasmiy ArchLinux omborlari dasturiy ta'minot ehtiyojlarini ` +
+    `qondirish uchun bir necha ming paketga kirishni ta'minlaydi. ` +
+    `Arch shuningdek, foydalanuvchi jamiyati o'sishini va maxsus ` +
+    `omborni (AUR - CPR) taklif qilish orqali jamiyatning hissasini ` +
+    `oshirishni rag'batlantiradi. makepkg yordamchi dasturidan foydalanib, ` +
+    `manba kodlaridan o'rnatish paketlarini yig'ish uchun minglab ` +
+    `foydalanuvchilar tomonidan qo'llab-quvvatlanadigan pkgbuild ` +
+    `skriptlarini o'z ichiga oladi. Bundan tashqari, foydalanuvchilarga ` +
+    `o'z omborlarini tashkil etishga hech narsa to'sqinlik qilmaydi.` +
+    `\n` +
+    `\n` +
+    `<b>Quyidagi keltirilgan tugmachalar orqali o'zingiz uchun AUR menejr tanlab olishingiz mumkin:</b>`
+
 // export const mirror: string = `<b></b>`
