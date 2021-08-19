@@ -6,7 +6,6 @@ import { Markup } from 'telegraf'
 
 composer.on('inline_query', async (ctx: TelegrafContext) => {
     const request = await aur('search', ctx.inlineQuery.query)
-    await console.log(request)
     if (request.resultcount !== 0) {
         const results = request.results.slice(0, 49).map((item) => ({
             type: 'article',
