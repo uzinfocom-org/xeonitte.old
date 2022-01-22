@@ -1,67 +1,48 @@
 import { composer, middleware } from '@core/bot'
 import * as consoles from '@layouts/consoles'
-import aur from '@database/aur'
+// import aur from '@database/aur'
 import { TelegrafContext } from '@type/telegraf'
 import { Markup } from 'telegraf'
+import { AUR, Search, STD } from 'xeorarch'
 
 composer.on('inline_query', async (ctx: TelegrafContext) => {
-    const request = await aur('search', ctx.inlineQuery.query)
-    if (request.resultcount !== 0) {
-        const results = request.results.slice(0, 49).map((item) => ({
+    const request = await Search.search(ctx.inlineQuery.query)
+    if (request.length !== 0) {
+        const results = request.slice(0, 49).map((item, index) => ({
             type: 'article',
-            id: item.ID,
-            title: item.Name,
-            url: `https://aur.archlinux.org/packages/${item.Name}`,
-            description: item.Description
-                ? item.Description
-                : "Ma'lumot mavjud emas",
+            id: index,
+            title: item.name,
+            url: item.type === "std" && item.url ? item.url : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`,
+            description: item.desc ? item.desc : "Ma'lumot mavjud emas",
             input_message_content: {
                 message_text:
-                    `<b>Nomi:</b> ${item.Name}` +
+                    `<b>Nomi:</b> ${item.name}` +
                     `\n` +
-                    (item.Version &&
-                        '<b>Versiyasi:</b> ' + item.Version + `\n`) +
-                    (item.Description &&
-                        "<b>Ma'lumot:</b> " + item.Description + `\n`) +
-                    (item.FirstSubmitted &&
-                        "<b>Qo'shilgan:</b> " +
-                            `${new Date(
-                                item.FirstSubmitted * 1000
-                            ).toLocaleString()}` +
-                            `\n`) +
-                    (item.LastModified &&
+                    (item.version &&
+                        '<b>Versiyasi:</b> ' + item.version + `\n`) +
+                    (item.desc && "<b>Ma'lumot:</b> " + item.desc + `\n`) +
+                    (item.repo && '<b>Repozitoriya:</b> ' + item.repo + `\n`) +
+                    (item.updated &&
                         "<b>O'zgartirilgan:</b> " +
-                            `${new Date(
-                                item.LastModified * 1000
-                            ).toLocaleString()}` +
+                            `${new Date(item.updated).toLocaleString()}` +
                             `\n`) +
                     `\n` +
                     `<b>O'rnatish uchun:</b>` +
                     `\n` +
-                    `<code>[yay|paru] -S ${item.Name}</code>`,
+                    `<code>${item.install}</code>`,
                 parse_mode: 'HTML'
             },
             reply_markup: Markup.inlineKeyboard([
-                [
-                    Markup.urlButton(
-                        `Arch AUR Sahifasi`,
-                        `https://aur.archlinux.org/packages/${item.Name}`
-                    )
-                ],
-                [
-                    Markup.urlButton(
-                        `AUR o'zi nima?`,
-                        `https://t.me/xeonittebot?start=aur`
-                    )
-                ]
+                [Markup.urlButton(`Web Sahifasi`, item.type === "std" && item.url ? item.url : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`)]
             ])
         }))
+
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         return await ctx.answerInlineQuery(results)
     }
 
-    if (request.resultcount === 0) {
+    if (request.length === 0) {
         if (ctx.inlineQuery.query === '') {
             return await ctx.answerInlineQuery([
                 {
