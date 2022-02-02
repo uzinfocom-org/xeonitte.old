@@ -3249,10 +3249,10 @@ xdg-basedir@^4.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
 
-xeorarch@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/xeorarch/-/xeorarch-1.6.1.tgz#a04f6ef61820fb6f0e45c63b71da67ebc8c8254a"
-  integrity sha512-egU+Iqefi7D83pJ+8POK6BnsNGL66H6sAlfWScycA9Sl0CmkPmxvbxbzOK5vZiZlyU4PW5hqEgsyr6Xb30XrFw==
+xeorarch@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/xeorarch/-/xeorarch-1.6.2.tgz#6f6ea6f82fdb0ce4d3473cd5eb574eb6da20f6e9"
+  integrity sha512-6tJeEjgacvWAdaMpHfpijIYIJ5xtiHVCSfS1+fk3kxlZfR4eNSMFHiz0MKNZYymSO0bQAbuqOh0w1QuCKbGnHA==
   dependencies:
     axios "^0.25.0"
     fuse.js "^6.5.3"

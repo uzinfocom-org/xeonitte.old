@@ -1,21 +1,27 @@
 import { composer, middleware } from '@core/bot'
 import * as consoles from '@layouts/consoles'
-// import aur from '@database/aur'
 import { TelegrafContext } from '@type/telegraf'
 import { Markup } from 'telegraf'
-import { AUR, Search, STD } from 'xeorarch'
+import { Search } from 'xeorarch'
+import { Package } from 'xeorarch/lib/search'
+
+const getLink = async (pack: Package): Promise<string> => {
+    if (pack.type === 'aur')
+        if (pack.url) return pack.url
+        else return `https://aur.archlinux.org/packages/${pack.name}`
+
+    if (pack.type === 'std')
+        return `https://archlinux.org/packages/${pack.repo}/${pack.arch}/${pack.name}/`
+}
 
 composer.on('inline_query', async (ctx: TelegrafContext) => {
     const request = await Search.search(ctx.inlineQuery.query)
     if (request.length !== 0) {
-        const results = request.slice(0, 49).map((item, index) => ({
+        const results = request.slice(0, 49).map(async (item, index) => ({
             type: 'article',
             id: index,
             title: item.name,
-            url:
-                item.type === 'std' && item.url
-                    ? item.url
-                    : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`,
+            url: await getLink(item),
             description: item.desc ? item.desc : "Ma'lumot mavjud emas",
             input_message_content: {
                 message_text:
@@ -38,14 +44,7 @@ composer.on('inline_query', async (ctx: TelegrafContext) => {
                 parse_mode: 'HTML'
             },
             reply_markup: Markup.inlineKeyboard([
-                [
-                    Markup.urlButton(
-                        `Web Sahifasi`,
-                        item.type === 'std' && item.url
-                            ? item.url
-                            : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`
-                    )
-                ]
+                [Markup.urlButton(`Web Sahifasi`, await getLink(item))]
             ])
         }))
 
