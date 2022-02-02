@@ -5,23 +5,24 @@ import { Markup } from 'telegraf'
 import { Search } from 'xeorarch'
 import { Package } from 'xeorarch/lib/search'
 
-const getLink = async (pack: Package): Promise<string> => {
+const getLink = (pack: Package): string => {
     if (pack.type === 'aur')
         if (pack.url) return pack.url
         else return `https://aur.archlinux.org/packages/${pack.name}`
 
     if (pack.type === 'std')
-        return `https://archlinux.org/packages/${pack.repo}/${pack.arch}/${pack.name}/`
+        if (pack.url) return pack.url
+        else return `https://archlinux.org/packages/${pack.repo}/${pack.arch}/${pack.name}`
 }
 
 composer.on('inline_query', async (ctx: TelegrafContext) => {
     const request = await Search.search(ctx.inlineQuery.query)
     if (request.length !== 0) {
-        const results = request.slice(0, 49).map(async (item, index) => ({
+        const results = request.slice(0, 49).map((item, index) => ({
             type: 'article',
             id: index,
             title: item.name,
-            url: await getLink(item),
+            url: getLink(item),
             description: item.desc ? item.desc : "Ma'lumot mavjud emas",
             input_message_content: {
                 message_text:
@@ -44,7 +45,7 @@ composer.on('inline_query', async (ctx: TelegrafContext) => {
                 parse_mode: 'HTML'
             },
             reply_markup: Markup.inlineKeyboard([
-                [Markup.urlButton(`Web Sahifasi`, await getLink(item))]
+                [Markup.urlButton(`Web Sahifasi`, getLink(item))]
             ])
         }))
 
