@@ -12,7 +12,10 @@ composer.on('inline_query', async (ctx: TelegrafContext) => {
             type: 'article',
             id: index,
             title: item.name,
-            url: item.type === "std" && item.url ? item.url : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`,
+            url:
+                item.type === 'std' && item.url
+                    ? item.url
+                    : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`,
             description: item.desc ? item.desc : "Ma'lumot mavjud emas",
             input_message_content: {
                 message_text:
@@ -21,7 +24,9 @@ composer.on('inline_query', async (ctx: TelegrafContext) => {
                     (item.version &&
                         '<b>Versiyasi:</b> ' + item.version + `\n`) +
                     (item.desc && "<b>Ma'lumot:</b> " + item.desc + `\n`) +
-                    (item.repo ? '<b>Repozitoriya:</b> ' + item.repo + `\n` : "") +
+                    (item.repo
+                        ? '<b>Repozitoriya:</b> ' + item.repo + `\n`
+                        : '') +
                     (item.updated &&
                         "<b>O'zgartirilgan:</b> " +
                             `${new Date(item.updated).toLocaleString()}` +
@@ -33,7 +38,14 @@ composer.on('inline_query', async (ctx: TelegrafContext) => {
                 parse_mode: 'HTML'
             },
             reply_markup: Markup.inlineKeyboard([
-                [Markup.urlButton(`Web Sahifasi`, item.type === "std" && item.url ? item.url : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`)]
+                [
+                    Markup.urlButton(
+                        `Web Sahifasi`,
+                        item.type === 'std' && item.url
+                            ? item.url
+                            : `https://archlinux.org/packages/${item.repo}/${item.arch}/${item.name}/`
+                    )
+                ]
             ])
         }))
 
