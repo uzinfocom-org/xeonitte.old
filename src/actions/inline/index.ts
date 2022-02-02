@@ -12,7 +12,8 @@ const getLink = (pack: Package): string => {
 
     if (pack.type === 'std')
         if (pack.url) return pack.url
-        else return `https://archlinux.org/packages/${pack.repo}/${pack.arch}/${pack.name}`
+        else
+            return `https://archlinux.org/packages/${pack.repo}/${pack.arch}/${pack.name}`
 }
 
 composer.on('inline_query', async (ctx: TelegrafContext) => {
