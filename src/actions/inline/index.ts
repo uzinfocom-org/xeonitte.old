@@ -21,7 +21,7 @@ composer.on('inline_query', async (ctx: TelegrafContext) => {
                     (item.version &&
                         '<b>Versiyasi:</b> ' + item.version + `\n`) +
                     (item.desc && "<b>Ma'lumot:</b> " + item.desc + `\n`) +
-                    (item.repo && '<b>Repozitoriya:</b> ' + item.repo + `\n`) +
+                    (item.repo ? '<b>Repozitoriya:</b> ' + item.repo + `\n` : "") +
                     (item.updated &&
                         "<b>O'zgartirilgan:</b> " +
                             `${new Date(item.updated).toLocaleString()}` +
