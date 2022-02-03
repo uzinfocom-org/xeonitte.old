@@ -27,15 +27,17 @@ bot.telegram.getMe().then((botInfo: User) => {
 })
 
 bot.use(async (ctx) => {
-    if (ctx.from.username) {
-        if (ctx.from.username === 'Channel_Bot') {
+    if (ctx.message.message_id) {
+        if (ctx.from.username) {
+            if (ctx.from.username === 'Channel_Bot') {
+                await ctx.deleteMessage()
+            }
+        }
+
+        const arabic = /[\u0600-\u06FF\u0750-\u077F]/
+        if (arabic.test(ctx.message.text)) {
             await ctx.deleteMessage()
         }
-    }
-
-    const arabic = /[\u0600-\u06FF]/
-    if (arabic.test(ctx.message.text)) {
-        await ctx.deleteMessage()
     }
 })
 
