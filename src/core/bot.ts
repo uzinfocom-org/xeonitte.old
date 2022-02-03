@@ -32,6 +32,11 @@ bot.use( async (ctx) => {
             await ctx.deleteMessage();
         }
     }
+
+    const arabic = /[\u0600-\u06FF]/;
+    if (arabic.test(ctx.message.text)) {
+        await ctx.deleteMessage()
+    }
 })
 
 try {
