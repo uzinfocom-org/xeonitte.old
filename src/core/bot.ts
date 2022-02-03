@@ -26,6 +26,14 @@ bot.telegram.getMe().then((botInfo: User) => {
     bot.options.username = botInfo.username
 })
 
+bot.use( async (ctx) => {
+    if (ctx.from.username) {
+        if (ctx.from.username === "Channel_Bot") {
+            await ctx.deleteMessage();
+        }
+    }
+})
+
 try {
     if (env.ENVIRONMENT === 'heroku')
         bot.launch({
