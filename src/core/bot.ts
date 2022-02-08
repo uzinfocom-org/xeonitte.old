@@ -26,7 +26,7 @@ bot.telegram.getMe().then((botInfo: User) => {
     bot.options.username = botInfo.username
 })
 
-bot.use(async (ctx) => {
+bot.use(async (ctx, next) => {
     try {
         if (ctx.message.message_id) {
             if (ctx.from.username) {
@@ -43,6 +43,7 @@ bot.use(async (ctx) => {
     } catch (_) {
         await console.log("Can't delete")
     }
+    await next()
 })
 
 try {
