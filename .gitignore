@@ -105,3 +105,6 @@ dist
 
 # IDEA files
 .idea
+
+# PM2 files
+ecosystem.config.js
