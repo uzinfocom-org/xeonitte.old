@@ -12,10 +12,14 @@ composer.command('doc', async (ctx: TelegrafContext): Promise<void> => {
     }
 
     if (ctx.message.reply_to_message) {
-        await ctx.replyWithHTML(await message.doc(false, ctx), {
-            disable_web_page_preview: true,
-            reply_to_message_id: ctx.message.reply_to_message.message_id
-        })
+        if (ctx.message.reply_to_message.from.id === ctx.botInfo.id) {
+            await ctx.replyWithHTML(`Ha-ha... yaxshi urinish!`)
+        } else {
+            await ctx.replyWithHTML(await message.doc(false, ctx), {
+                disable_web_page_preview: true,
+                reply_to_message_id: ctx.message.reply_to_message.message_id
+            })
+        }
     }
 })
 
