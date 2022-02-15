@@ -6,9 +6,11 @@ import { TelegrafContext } from '@type/telegraf'
 
 composer.command('off', async (ctx: TelegrafContext): Promise<void> => {
     if (ctx.message.reply_to_message) {
-        await ctx.replyWithHTML(message.offtopic(ctx), {
-            reply_markup: keyboard.offtopic
-        })
+        ctx.message.reply_to_message.from.id === ctx.botInfo.id
+            ? await ctx.replyWithHTML(`Ha-ha... yaxshi urinish!`)
+            : await ctx.replyWithHTML(message.offtopic(ctx), {
+                  reply_markup: keyboard.offtopic
+              })
         await ctx
             .deleteMessage(ctx.message.reply_to_message.message_id)
             .catch(() => {
